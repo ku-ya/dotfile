@@ -138,3 +138,9 @@ source /opt/ros/kinetic/setup.bash
 
 # ln -s /media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3 ~/ex_data
 # export ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3"
+
+# Settings
+source ~/.bash/settings.bash
+
+# Plugins
+source ~/.bash/plugins.bash

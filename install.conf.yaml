@@ -6,11 +6,14 @@
 - clean: ['~', '~./config']
 
 - link:
+    ~/.bash:
     ~/.bashrc:
     ~/.tmux.conf:
+    ~/.shell:
     ~/.vimrc:
     ~/.vim:
     ~/.dotfiles: ''
+    ~/.zsh:
     ~/.zshrc:
 
 - shell:
