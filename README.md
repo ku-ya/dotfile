@@ -11,3 +11,9 @@ system configuration dotfile
 - Vundle
 
 ## .zshrc
+
+## Latex
+- Use vimtex + zathura (install zathura and zathura-dev)
+- Inverse and forward search works
+- [some useful info](https://wikimatze.de/vimtex-the-perfect-tool-for-working-with-tex-and-vim/)
+- require xdotool
