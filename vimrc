@@ -67,7 +67,8 @@ set laststatus=2
 set relativenumber
 set number
 set numberwidth=5
-autocmd BufRead,BufNewFile *.md, *.tex setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.md *.tex setlocal spell spelllang=en_us
 " set complete+=kspell
+nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
 let g:latex_view_general_viewer = "zathura"
 let g:vimtex_view_method = "zathura"
