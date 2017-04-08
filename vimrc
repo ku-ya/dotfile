@@ -18,27 +18,24 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'klen/python-mode'
 Plugin 'valloric/youcompleteme'
-
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'tmhedberg/SimpylFold'
-" Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'lervag/vimtex'
-" Plugin 'vim-latex/vim-latex'
+Plugin 'takac/vim-hardtime'
+" Plugin 'wikitopian/hardmode'
+" Plugin 'tmhedberg/SimpylFold'
+" Plugin 'davidhalter/jedi-vim'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " Plugin 'sirver/ultisnips'
 " Plugin 'tpope/vim-markdown'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 " Snippets are separated from the engine. Add this if you want them:
-" Plugin 'honza/vim-snippets'
-" Plugin 'suan/vim-instant-markdown'
-" let g:instant_markdown_slow = 1
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -64,6 +61,7 @@ set background=dark
 set laststatus=2
 " autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " set clipboard=unnamed
+set colorcolumn=80
 set relativenumber
 set number
 set numberwidth=5
