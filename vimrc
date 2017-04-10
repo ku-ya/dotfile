@@ -38,8 +38,7 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " Snippets are separated from the engine. Add this if you want them:
 autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd VimEnter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * wincmd p
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
