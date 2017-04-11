@@ -85,3 +85,4 @@ export VISUAL=$EDITOR
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source .oh-my-zsh/lib/alias.zsh
+alias ~/ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3/"
