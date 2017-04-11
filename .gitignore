@@ -1,4 +1,6 @@
 # Created by https://www.gitignore.io/api/osx,vim,c++,linux,latex,python,jabref
+tmux/*
+vim/*
 
 ### C++ ###
 # Prerequisites
