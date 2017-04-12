@@ -106,3 +106,6 @@ powerline-daemon -q
 if [[ -r /home/kuya/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
     source /home/kuya/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh 
 fi
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi

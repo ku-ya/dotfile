@@ -1,5 +1,3 @@
-set encoding=utf-8
-"Install vim-plug if not present.
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -15,7 +13,8 @@ set smarttab
 " auto detect filetype
 filetype plugin on
 
-
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin('~/.config/nvim/plug.vim')
 " Appearance
@@ -29,17 +28,28 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
 Plug 'https://github.com/kien/ctrlp.vim'
-
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'takac/vim-hardtime'
+Plug 'zchee/deoplete-jedi'
+Plug 'taketwo/vim-ros'
+Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'wikitopian/hardmode'
 call plug#end()
+
+" ctrlpvim setting
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 set autochdir                " automatically change directory
 let NERDTreeChDirMode=2
-
 
 syntax enable
 
@@ -82,3 +92,13 @@ execute "set colorcolumn=" . join(range(81,335), ',')
 
 " Executing python command
 nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
+
+" deoplete configuration
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+" let g:deoplete#disable_auto_complete = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
