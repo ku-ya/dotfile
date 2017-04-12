@@ -13,10 +13,12 @@
     ~/.shell:
     ~/.vimrc:
     ~/.vim:
+    ~/.fonts:
     ~/.dotfiles: ''
     ~/.zsh:
     ~/.zshrc:
     ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/powerline: config/powerline
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 

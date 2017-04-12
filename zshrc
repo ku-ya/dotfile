@@ -7,8 +7,7 @@ export ZSH=$HOME/.dotfiles/zsh/plugins/oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
-
+ZSH_THEME=""
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -32,7 +31,7 @@ ZSH_THEME="bureau"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -69,6 +68,8 @@ export VISUAL=$EDITOR
 # else
 #   export EDITOR='mvim'
 # fi
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,3 +87,22 @@ export VISUAL=$EDITOR
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source .oh-my-zsh/lib/alias.zsh
 alias ~/ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3/"
+
+export PATH="/usr/local/lib64:$PATH"
+export PATH="/usr/local/cuda-8.0/bin:$PATH"
+export PATH="/usr/local/cuda-8.0/lib64:$PATH"
+
+
+export PATH="/home/kuya/anaconda3/bin:$PATH/"
+source /opt/ros/kinetic/setup.zsh
+# source ~/catkin_ws/devel/setup.bash
+# source ~/sandbox/devel/setup.bash
+# source ~/checkbox/install/setup.bash
+# source ~/odroid_ws/devel/setup.bash
+source ~/ex_data/UAV/devel/setup.zsh
+
+# setup powerline
+powerline-daemon -q
+if [[ -r /home/kuya/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /home/kuya/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh 
+fi

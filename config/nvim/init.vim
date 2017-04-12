@@ -1,3 +1,4 @@
+set encoding=utf-8
 "Install vim-plug if not present.
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -29,8 +30,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
 Plug 'https://github.com/kien/ctrlp.vim'
 
-" Plug 'takac/vim-hardtime'
-Plug 'wikitopian/hardmode'
+Plug 'takac/vim-hardtime'
+" Plug 'wikitopian/hardmode'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
