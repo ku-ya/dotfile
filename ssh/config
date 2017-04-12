@@ -1,0 +1,4 @@
+Host odroid
+ User odroid
+ HostName 192.168.10.7
+ IdentityFile ~/.ssh/odroid
