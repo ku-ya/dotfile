@@ -3,22 +3,20 @@
       create: true
       relink: true
 
-- clean: ['~', '~./config']
+- clean: ['~', '~/.config']
 
 - link:
     ~/.bash:
     ~/.bashrc:
-    ~/.tmux:
-    ~/.tmux.conf:
-    ~/.shell:
-    ~/.vimrc:
-    ~/.vim:
-    ~/.fonts:
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/nvim: config/nvim
+    ~/.config/powerline: config/powerline
     ~/.dotfiles: ''
+    ~/.shell:
+    ~/.tmux.conf:
+    ~/.tmux:
     ~/.zsh:
     ~/.zshrc:
-    ~/.config/nvim/init.vim: config/nvim/init.vim
-    ~/.config/powerline: config/powerline
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 
