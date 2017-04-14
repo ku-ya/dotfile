@@ -1,20 +1,17 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
 " ctag
 command! MakeTags !ctags -R .
 
 set ruler           " Show the line and column number of the cursor position,
-                    " separated by a comma.
-set smarttab
+" separated by a comma.
 " auto detect filetype
-filetype plugin on
+filetype indent plugin on
 
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin('~/.config/nvim/plug.vim')
 " Appearance
@@ -34,6 +31,8 @@ Plug 'taketwo/vim-ros'
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'vim-airline/vim-airline-themes'
 Plug 'zchee/deoplete-jedi'
+Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'Yggdroot/indentLine'
 " Plug 'wikitopian/hardmode'
 call plug#end()
 
@@ -46,11 +45,11 @@ let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
 endfunc
 map <C-Tab> :call NumberToggle()<cr>
 
@@ -68,9 +67,9 @@ set t_Co=256
 
 " Colorschemes
 if has('gui_running')
-  set background=light
+    set background=light
 else
-  set background=dark
+    set background=dark
 endif
 
 " Airline
@@ -88,9 +87,21 @@ set relativenumber
 set number
 set colorcolumn=80
 
-set tabstop=2
-set shiftwidth=2
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set foldmethod=indent
+set softtabstop=4
 set expandtab
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+" let g:indentLine_enabled = 1
+" let g:indentLine_color_term = 8
+" let g:indentLine_char = '»'
+" let g:indentLine_leadingSpaceChar = '·'
+" let g:indentLine_leadingSpaceEnabled = 1
 
 let g:latex_view_general_viewer = "zathura"
 let g:vimtex_view_method = "zathura"
@@ -105,7 +116,7 @@ nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
 " deoplete configuration
 let g:deoplete#enable_at_startup = 1
 if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
+    let g:deoplete#omni#input_patterns = {}
 endif
 " let g:deoplete#disable_auto_complete = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
