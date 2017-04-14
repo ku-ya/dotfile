@@ -18,21 +18,22 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin('~/.config/nvim/plug.vim')
 " Appearance
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bitc/vim-bad-whitespace'
-Plug 'altercation/vim-colors-solarized'
-Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
-Plug 'freeo/vim-kalisi'
-Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree'
-Plug 'lervag/vimtex'
-Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'takac/vim-hardtime'
-Plug 'zchee/deoplete-jedi'
-Plug 'taketwo/vim-ros'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bitc/vim-bad-whitespace'
+Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'freeo/vim-kalisi'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'lervag/vimtex'
+Plug 'mhinz/neovim-remote'
+Plug 'scrooloose/nerdtree'
+Plug 'takac/vim-hardtime'
+Plug 'taketwo/vim-ros'
+Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
+Plug 'vim-airline/vim-airline-themes'
+Plug 'zchee/deoplete-jedi'
 " Plug 'wikitopian/hardmode'
 call plug#end()
 
@@ -44,6 +45,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+map <C-Tab> :call NumberToggle()<cr>
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
@@ -102,3 +111,6 @@ endif
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" want cross-machine spell file to be used
+" set spellfile=$HOME/dotfiles/spell/file_name_add

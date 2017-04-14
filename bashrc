@@ -121,14 +121,14 @@ export PATH="/usr/local/lib64:$PATH"
 export PATH="/usr/local/cuda-8.0/bin:$PATH"
 export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
-
+export PATH=/usr/bin/python2.7:$PATH
 # export PATH="/home/kuya/anaconda2/bin:$PATH/"
 source /opt/ros/kinetic/setup.bash
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.bash
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
-
+source ~/ex_data/UAV/devel/setup.bash
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # eval "$(rbenv init -)"
 # export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
@@ -140,7 +140,7 @@ source /opt/ros/kinetic/setup.bash
 # export ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3"
 
 # Settings
-source ~/.bash/settings.bash
+# source ~/.bash/settings.bash
 
 # Plugins
-source ~/.bash/plugins.bash
+# source ~/.bash/plugins.bash
