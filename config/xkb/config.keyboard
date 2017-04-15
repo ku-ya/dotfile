@@ -1,0 +1,4 @@
+rules:      evdev
+model:      pc105
+layout:     us
+options:    caps:swapescape
