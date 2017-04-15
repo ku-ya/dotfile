@@ -92,13 +92,13 @@ export PATH="/usr/local/cuda-8.0/bin:$PATH"
 export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-export PATH="/home/kuya/anaconda3/bin:$PATH/"
-source /opt/ros/kinetic/setup.zsh
+# export PATH="/home/kuya/anaconda3/bin:$PATH/"
+# source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
-source ~/sandbox/devel/setup.zsh
+# source ~/sandbox/devel/setup.zsh
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
-source ~/ex_data/UAV/devel/setup.zsh
+# source ~/ex_data/UAV/devel/setup.zsh
 
 # setup powerline
 powerline-daemon -q
