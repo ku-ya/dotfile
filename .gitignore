@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/osx,vim,c++,linux,latex,python,jabref
 tmux/*
 vim/*
-
+JabRef-3.8.2.jar
 ### C++ ###
 # Prerequisites
 *.d
