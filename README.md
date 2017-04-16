@@ -1,4 +1,8 @@
 # dotfile
+## System dependencies and application install
+- run ```bash install.sh```
+- TODO: complete by adding repository download and execution
+
 system configuration dotfile
 - if system copy is not working check: sudo apt-get install vim-gtk
 
@@ -11,18 +15,21 @@ $ ./install
 
 [link to ubuntu help](https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
 - after json file updade, run: powerline-daemon --replace
+- powerline is used for all ipython, tmux, and neovim.
 
 ## Switching cap-lock and esc
-- Option: gnome-tweak-tool
+- use setxkbmap
+- config/xkb/config.keyboard file canbe applied
 
 ## tmux.conf
+- powerline theme and configuration
 
 ## system wise font setting
 
 sudo fc-cache -vf ~/.fonts
 
-## .vimrc
-- Vundle
+## neovim
+- config/nvim/init.vim
 
 ## .zshrc
 

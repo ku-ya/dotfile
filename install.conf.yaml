@@ -8,8 +8,8 @@
 - link:
     ~/.bash:
     ~/.bashrc:
+    ~/.config/xkb: config/xkb
     ~/.config/nvim/init.vim: config/nvim/init.vim
-    ~/.config/nvim: config/nvim
     ~/.config/powerline: config/powerline
     ~/.dotfiles: ''
     ~/.shell:
@@ -18,6 +18,8 @@
     ~/.tmux:
     ~/.zsh:
     ~/.zshrc:
+    ~/.xinirc:
+    ~/.ipython/profile_default/ipython_config.py: config/ipython/ipython_config.py
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
 

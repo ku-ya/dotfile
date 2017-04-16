@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -92,7 +92,7 @@ export PATH="/usr/local/cuda-8.0/bin:$PATH"
 export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-# export PATH="/home/kuya/anaconda3/bin:$PATH/"
+export PATH="$HOME/anaconda3/bin:$PATH/"
 # source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.zsh
@@ -105,6 +105,7 @@ powerline-daemon -q
 if [[ -r ~/.config/powerline/bindings/zsh/powerline.zsh ]]; then
     source ~/.config/powerline/bindings/zsh/powerline.zsh 
 fi
+
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi

@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+setxkbmap -option caps:swapescape 
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -43,7 +45,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -144,3 +146,4 @@ source ~/.bash/settings.bash
 
 # Plugins
 source ~/.bash/plugins.bash
+. ~/.config/powerline/bindings/bash/powerline.sh
