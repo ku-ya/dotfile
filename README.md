@@ -14,8 +14,15 @@ $ ./install
 ## powerline unified theme
 
 [link to ubuntu help](https://askubuntu.com/questions/283908/how-can-i-install-and-use-powerline-plugin)
+[powerline-gitstatus](https://github.com/jaspernbrouwer/powerline-gitstatus)
+
 - after json file updade, run: powerline-daemon --replace
 - powerline is used for all ipython, tmux, and neovim.
+
+```
+$ pip install powerline-status
+$ pip install powerline-gitstatus
+```
 
 ## Switching cap-lock and esc
 - use setxkbmap
