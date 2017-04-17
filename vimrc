@@ -26,8 +26,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'lervag/vimtex'
-Plugin 'takac/vim-hardtime'
-" Plugin 'wikitopian/hardmode'
+" Plugin 'takac/vim-hardtime'
+Plugin 'wikitopian/hardmode'
 " Plugin 'tmhedberg/SimpylFold'
 " Plugin 'davidhalter/jedi-vim'
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
@@ -45,7 +45,8 @@ autocmd VimEnter * wincmd p
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 

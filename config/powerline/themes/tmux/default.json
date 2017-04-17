@@ -2,7 +2,7 @@
 	"segments": {
 		"right": [
 			{
-				"function": "powerline.segments.common.net.external_ip"
+				"function": "powerline.segments.common.net.internal_ip"
 			},
 			{
 				"function": "powerline.segments.common.sys.uptime",
@@ -26,11 +26,6 @@
 			{
 				"function": "powerline.segments.common.net.hostname"
 			}
-		],
-        "left": [
-	        {
-		    	"function": "powerline.segments.common.net.external_ip"
-	        }
-        ]
+		]
 	}
 }

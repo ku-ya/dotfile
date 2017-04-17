@@ -1,6 +1,6 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 
@@ -26,23 +26,25 @@ Plug 'https://github.com/kien/ctrlp.vim'
 Plug 'lervag/vimtex'
 Plug 'mhinz/neovim-remote'
 Plug 'scrooloose/nerdtree'
-Plug 'takac/vim-hardtime'
+" Plug 'takac/vim-hardtime'
 Plug 'taketwo/vim-ros'
 Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'vim-airline/vim-airline-themes'
 Plug 'zchee/deoplete-jedi'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'Yggdroot/indentLine'
-" Plug 'wikitopian/hardmode'
+Plug 'wikitopian/hardmode'
 call plug#end()
 
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 " ctrlpvim setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command =['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 function! NumberToggle()
     if(&relativenumber == 1)
@@ -83,7 +85,7 @@ let g:airline_theme='kalisi'
 let g:airline_powerline_fonts = 1
 let g:solarized_termcolors=256
 
-set relativenumber
+" set relativenumber
 set number
 set colorcolumn=80
 
@@ -108,7 +110,7 @@ let g:vimtex_view_method = "zathura"
 
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-execute "set colorcolumn=" . join(range(81,335), ',')
+" execute "set colorcolumn=" . join(range(81,335), ',')
 
 " Executing python command
 nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
