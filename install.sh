@@ -14,17 +14,23 @@ apt-get -y install git\
 	vim\
     zsh\
     build-essential
+if [ ! -d "~/anaconda"]; then
+	wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh
+	bash ~/anaconda.sh -b -p $HOME/anaconda
+	export PATH="$HOME/anaconda/bin:$PATH"
+fi
 
-wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh
-bash ~/anaconda.sh -b -p $HOME/anaconda
+
 export PATH="$HOME/anaconda/bin:$PATH"
 
+pip install -U pip
 pip install powerline-status
-pip install powerline-gitstatus
+pip install powerline-gitstatus 
 
-exit
 #Get or update neovim github repo
-mkdir -p ~/src
+if [ ! -d "~/src" ]; then
+	mkdir -p ~/src
+fi
 cd ~/src
 if [ ! -e ~/src/neovim ]; then
   git clone https://github.com/neovim/neovim.git

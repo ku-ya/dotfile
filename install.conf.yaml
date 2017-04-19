@@ -13,6 +13,7 @@
     ~/.config/powerline: config/powerline
     ~/.dotfiles: ''
     ~/.shell:
+    ~/.fonts:
     ~/.ssh/config: ssh/config
     ~/.tmux.conf:
     ~/.tmux:

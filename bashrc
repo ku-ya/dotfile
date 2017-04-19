@@ -124,7 +124,7 @@ fi
 # export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-export PATH="~/anaconda3/bin:$PATH/"
+export PATH="~/anaconda3/bin/python:$PATH/"
 source /opt/ros/kinetic/setup.bash
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.bash
