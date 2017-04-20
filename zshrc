@@ -85,20 +85,20 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source .oh-my-zsh/lib/alias.zsh
-alias ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3/"
+# alias ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3/"
 
-export PATH="/usr/local/lib64:$PATH"
-export PATH="/usr/local/cuda-8.0/bin:$PATH"
-export PATH="/usr/local/cuda-8.0/lib64:$PATH"
+# export PATH="/usr/local/lib64:$PATH"
+#export PATH="/usr/local/cuda-8.0/bin:$PATH"
+#export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-export PATH="$HOME/anaconda3/bin:$PATH/"
-source /opt/ros/kinetic/setup.zsh
+#export PATH="$HOME/anaconda3/bin:$PATH/"
+#source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.zsh
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
-source ~/UAV/devel/setup.zsh
+# source ~/UAV/devel/setup.zsh
 
 # setup powerline
 powerline-daemon -q
@@ -109,3 +109,7 @@ fi
 if type nvim > /dev/null 2>&1; then
   alias vi='nvim'
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8

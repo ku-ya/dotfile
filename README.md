@@ -34,6 +34,7 @@ $ pip install powerline-gitstatus
 ## system wise font setting
 
 sudo fc-cache -vf ~/.fonts
+* if using gnome-terminal the terminal configuration should be changed to use powerline fonts
 
 ## neovim
 - config/nvim/init.vim
