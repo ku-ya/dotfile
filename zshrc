@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+setxkbmap -option caps:swapescape
 # Path to your oh-my-zsh installation.
 export ZSH=~/.zsh/plugins/oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -92,7 +92,7 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 #export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-#export PATH="$HOME/anaconda3/bin:$PATH/"
+export PATH="$HOME/anaconda/bin:$PATH/"
 #source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.zsh

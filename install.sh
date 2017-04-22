@@ -13,8 +13,10 @@ apt-get -y install git\
 	python-pip\
 	vim\
     zsh\
+    xclip\
     build-essential
-if [ ! -d "~/anaconda"]; then
+
+if [ ! -d "~/anaconda" ]; then
 	wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh
 	bash ~/anaconda.sh -b -p $HOME/anaconda
 	export PATH="$HOME/anaconda/bin:$PATH"
@@ -51,7 +53,7 @@ make install
 
 # Enable use of python plugins
 # pip2 install --user --upgrade neovim
-
+apt-get install pandoc -y
 
 ##	neovim\
 ##add-apt-repository ppa:neovim-ppa/unstable

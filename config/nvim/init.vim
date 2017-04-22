@@ -127,3 +127,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " want cross-machine spell file to be used
 " set spellfile=$HOME/dotfiles/spell/file_name_add
+" quick toggle for the set list
+set list
+set listchars=tab:▸\ ,eol:¬,precedes:‹,nbsp:·,trail:·
