@@ -92,7 +92,7 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 #export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
-export PATH="$HOME/anaconda/bin:$PATH/"
+export PATH="$HOME/anaconda3/bin:$PATH/"
 #source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.zsh

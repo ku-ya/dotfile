@@ -14,5 +14,5 @@
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "powerline/fonts"]
-    path = fonts/powerline
-    url = https://github.com/powerline/fonts.git
+	path = fonts/powerline
+	url = https://github.com/powerline/fonts.git
