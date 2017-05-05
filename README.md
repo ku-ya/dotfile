@@ -41,6 +41,9 @@ sudo fc-cache -vf ~/.fonts
 
 ## .zshrc
 
+- The error ```function definition file not found```: fix: rm ~/.zcompdump*
+- or add ```setopt HIST_IGNORE_ALL_DUPS```
+
 ## Latex
 - Use vimtex + zathura (install zathura and zathura-dev)
 - Inverse and forward search works

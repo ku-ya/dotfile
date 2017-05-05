@@ -93,7 +93,7 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 
 
 export PATH="$HOME/anaconda3/bin:$PATH/"
-#source /opt/ros/kinetic/setup.zsh
+source /opt/ros/kinetic/setup.zsh
 # source ~/catkin_ws/devel/setup.bash
 # source ~/sandbox/devel/setup.zsh
 # source ~/checkbox/install/setup.bash
