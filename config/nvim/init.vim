@@ -32,12 +32,16 @@ Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
 Plug 'vim-airline/vim-airline-themes'
 Plug 'zchee/deoplete-jedi'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 " Plug 'Yggdroot/indentLine'
-Plug 'wikitopian/hardmode'
+" Plug 'wikitopian/hardmode'
 call plug#end()
 
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+let g:indentLine_char = '|'
+
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 " ctrlpvim setting
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -92,7 +96,7 @@ set colorcolumn=80
 set smarttab
 set tabstop=4
 set shiftwidth=4
-set foldmethod=indent
+" set foldmethod=indent
 set softtabstop=4
 set expandtab
 

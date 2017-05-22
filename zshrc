@@ -98,7 +98,7 @@ source /opt/ros/kinetic/setup.zsh
 # source ~/sandbox/devel/setup.zsh
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
-# source ~/UAV/devel/setup.zsh
+source ~/uav/devel/setup.zsh
 
 # setup powerline
 powerline-daemon -q
