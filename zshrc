@@ -64,6 +64,10 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+
+# allow cd supression
+setopt AUTO_CD
+
 # else
 #   export EDITOR='mvim'
 # fi

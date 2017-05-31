@@ -99,6 +99,17 @@ set shiftwidth=4
 " set foldmethod=indent
 set softtabstop=4
 set expandtab
+set autoindent
+
+func! WordProcessorMode()
+    setlocal textwidth=80
+    setlocal smartindent
+    setlocal spell spelllang=en_us
+    setlocal noexpandtab
+endfu
+
+com! WP call WordProcessorMode()
+
 
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
