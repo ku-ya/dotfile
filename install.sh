@@ -16,14 +16,14 @@ sudo apt-get -y install git\
     xclip\
     build-essential
 
-if [ ! -d "~/anaconda3" ]; then
-	wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh
-	bash ~/anaconda.sh -b -p $HOME/anaconda
-	export PATH="$HOME/anaconda3/bin:$PATH"
-fi
+#if [ ! -d "~/anaconda3" ]; then
+#	wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh
+#	bash ~/anaconda.sh -b -p $HOME/anaconda
+#	export PATH="$HOME/anaconda3/bin:$PATH"
+#fi
 
 
-export PATH="$HOME/anaconda3/bin:$PATH"
+#export PATH="$HOME/anaconda3/bin:$PATH"
 
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 

@@ -114,6 +114,11 @@ if type nvim > /dev/null 2>&1; then
   alias vi='nvim'
 fi
 
+function chpwd(){
+    emulate -L zsh
+    ls -a
+}
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
