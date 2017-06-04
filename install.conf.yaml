@@ -12,6 +12,7 @@
     ~/.config/nvim/init.vim: config/nvim/init.vim
     ~/.config/powerline: config/powerline
     ~/.dotfiles: ''
+    ~/.gitconfig:
     ~/.shell:
     ~/.fonts:
     ~/.ssh/config: ssh/config
