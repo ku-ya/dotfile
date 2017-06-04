@@ -1,3 +1,14 @@
 [user]
     name = kuya
     email = kuya@gwu.edu
+
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = nvim
+    filemode = false
+[push]
+    default = simple
+[commit]
+    gpgsign = false
+[url "git@github.com:"]
+insteadOf = https://github.com/
