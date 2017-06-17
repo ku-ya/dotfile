@@ -147,3 +147,5 @@ source ~/.bash/settings.bash
 # Plugins
 source ~/.bash/plugins.bash
 . ~/.config/powerline/bindings/bash/powerline.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -92,8 +92,8 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 # alias ex_data="/media/kuya/e7916bba-cd32-4e8e-b40c-c0705c6699f3/"
 
 # export PATH="/usr/local/lib64:$PATH"
-#export PATH="/usr/local/cuda-8.0/bin:$PATH"
-#export PATH="/usr/local/cuda-8.0/lib64:$PATH"
+export PATH="/usr/local/cuda-8.0/bin:$PATH"
+export PATH="/usr/local/cuda-8.0/lib64:$PATH"
 
 
 export PATH="$HOME/anaconda/bin:$PATH/"
@@ -107,7 +107,7 @@ source ~/uav/devel/setup.zsh
 # setup powerline
 powerline-daemon -q
 if [[ -r ~/.config/powerline/bindings/zsh/powerline.zsh ]]; then
-    source ~/.config/powerline/bindings/zsh/powerline.zsh 
+    source ~/.config/powerline/bindings/zsh/powerline.zsh
 fi
 
 if type nvim > /dev/null 2>&1; then
@@ -122,3 +122,5 @@ function chpwd(){
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
