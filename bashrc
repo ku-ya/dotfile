@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-setxkbmap -option caps:swapescape 
+setxkbmap -option caps:swapescape
 
 # If not running interactively, don't do anything
 case $- in
@@ -126,7 +126,7 @@ fi
 
 export PATH="~/anaconda3/bin/python:$PATH/"
 source /opt/ros/kinetic/setup.bash
-# source ~/catkin_ws/devel/setup.bash
+source ~/uav/devel/setup.bash
 # source ~/sandbox/devel/setup.bash
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
@@ -147,5 +147,9 @@ source ~/.bash/settings.bash
 # Plugins
 source ~/.bash/plugins.bash
 . ~/.config/powerline/bindings/bash/powerline.sh
+
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/home/kt/anaconda2/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
