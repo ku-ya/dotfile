@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-setxkbmap -option caps:swapescape 
+setxkbmap -option caps:swapescape
 
 # If not running interactively, don't do anything
 case $- in
@@ -148,5 +148,8 @@ source ~/.bash/settings.bash
 source ~/.bash/plugins.bash
 . ~/.config/powerline/bindings/bash/powerline.sh
 
+
 # added by Anaconda2 4.4.0 installer
 export PATH="/home/kt/anaconda2/bin:$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

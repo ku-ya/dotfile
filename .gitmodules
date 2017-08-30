@@ -16,3 +16,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "zfz"]
+    path = zfz
+    url = https://github.com/junegunn/fzf.git

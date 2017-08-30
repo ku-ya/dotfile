@@ -2,7 +2,11 @@ Host odroid
  User odroid
  HostName 192.168.10.17
  IdentityFile ~/.ssh/odroid
-Host ubuntu
+Host jetson
  User ubuntu
- Hostname 192.168.10.26
+ HostName 192.168.10.26
  IdentityFile ~/.ssh/jetson
+Host hako
+ User moca
+ HostName 192.168.10.7
+ IdentityFile ~/.ssh/hako
