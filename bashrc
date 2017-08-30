@@ -126,7 +126,7 @@ fi
 
 export PATH="~/anaconda3/bin/python:$PATH/"
 source /opt/ros/kinetic/setup.bash
-# source ~/catkin_ws/devel/setup.bash
+source ~/uav/devel/setup.bash
 # source ~/sandbox/devel/setup.bash
 # source ~/checkbox/install/setup.bash
 # source ~/odroid_ws/devel/setup.bash
@@ -147,3 +147,6 @@ source ~/.bash/settings.bash
 # Plugins
 source ~/.bash/plugins.bash
 . ~/.config/powerline/bindings/bash/powerline.sh
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/home/kt/anaconda2/bin:$PATH"

@@ -2,3 +2,7 @@ Host odroid
  User odroid
  HostName 192.168.10.17
  IdentityFile ~/.ssh/odroid
+Host ubuntu
+ User ubuntu
+ Hostname 192.168.10.26
+ IdentityFile ~/.ssh/jetson
